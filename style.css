@@ -1,0 +1,263 @@
+/* ===================== */
+/* GLOBAL STYLES         */
+/* ===================== */
+@font-face {
+  font-family: 'Program Narrow';
+  src: url('fonts/ProgramNarrow.woff2') format('woff2'),
+       url('fonts/ProgramNarrow.woff') format('woff'),
+       url('fonts/ProgramNarrow.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Program Narrow OT';
+  src: url('fonts/ProgramNarrow.woff2') format('woff2'),
+       url('fonts/ProgramNarrow.woff') format('woff'),
+       url('fonts/ProgramNarrow.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins Local';
+  src: url('fonts/Poppins-Regular.woff2') format('woff2'),
+       url('fonts/Poppins-Regular.woff') format('woff'),
+       url('fonts/Poppins-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Poppins Local';
+  src: url('fonts/Poppins-SemiBold.woff2') format('woff2'),
+       url('fonts/Poppins-SemiBold.woff') format('woff'),
+       url('fonts/Poppins-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins Local', 'Poppins', sans-serif;
+    background-color: #ffe27d; /* Millie’s yellow */
+    color: #333;
+    text-align: center;
+    overflow-x: hidden;
+  }
+  
+  /* ===================== */
+  /* NAVBAR                 */
+  /* ===================== */
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 76px;
+    background: #ffffff;
+    border-bottom: none;
+    box-shadow: none; /* remove visible line */
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    z-index: 1000;
+  }
+  .navbar-brand img { height: 56px; display: block; }
+
+  .airport-title {
+    position: static; /* scrolls with page */
+    background: #ffe27d; /* blend with page, hide seam */
+    text-align: center;
+    padding: 0 0 6px; /* bring image closer to navbar */
+    margin-top: 76px; /* offset fixed navbar height */
+    z-index: 1;
+  }
+
+  .airport-title img {
+    display: block;
+    width: 100%;
+    max-width: 1400px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  /* ===================== */
+  /* CONTAINER / LAYOUT    */
+  /* ===================== */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem 3rem;
+    padding-top: 16px; /* content spacing below title */
+  }
+  
+  /* ===================== */
+  /* HERO SECTION          */
+  /* ===================== */
+  .hero {
+    background: transparent;
+    padding: 0.5rem 0 0;
+    position: relative;
+    margin-top: -40px; /* pull hero up closer to the title */
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  /* remove headline/button on this page */
+  
+  /* ===================== */
+  /* INTRODUCING STRIP     */
+  /* ===================== */
+  .introducing-strip {
+    position: relative;
+    width: 100vw; /* full-bleed */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 0;
+    margin-top: -36px; /* nudge banner further up */
+  }
+
+  .introducing-strip img {
+    display: block;
+    width: 100vw; /* span entire screen */
+    height: auto;
+    margin: 0; /* edge-to-edge */
+    border: 0;
+  }
+  
+  /* ===================== */
+  /* FLAVOR CARDS          */
+  /* ===================== */
+.flavors-section {
+    background: transparent;
+  margin-top: 120px; /* spacing above cups */
+    padding: 20px 1rem 40px;
+  }
+
+  .flavors {
+    max-width: 1200px;
+    margin: 20px auto 0; /* add top gap above tiles */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem; /* space between tiles */
+  }
+  
+.flavor-card {
+    position: relative;
+  background: transparent;
+  border-radius: 0;
+  padding: 0; /* remove tile spacing */
+  color: #fff;
+  text-align: center;
+  z-index: 1;
+  height: 180px; /* space for cup image */
+  }
+
+.flavor-card::before { content: none; }
+  
+  .flavor-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .flavor-card img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+  transform: translate(-50%, -25%); /* position cup within card area */
+    width: 85%;
+    max-width: 260px;
+    border: none;
+    box-shadow: none; /* avoid rectangular shadow */
+    filter: drop-shadow(0 8px 14px rgba(0,0,0,0.18)); /* shadow respects PNG transparency */
+    background: transparent; /* ensure no block background */
+    z-index: 2;
+  }
+  
+.flavor-title { display: none; }
+  
+.flavor-card p { display: none; }
+
+  /* Image strip for flavor titles placed below cups */
+.flavor-titles-image {
+  width: 100%;
+  margin: -80px 0 0 0; /* smaller gap below cups */
+  text-align: center;
+}
+  .flavor-titles-image img {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    margin: 0 auto;
+  }
+  
+  /* ===================== */
+  /* STORY SECTION         */
+  /* ===================== */
+  .story {
+    background: transparent;
+    padding: 2rem 0;
+    margin-top: 2rem;
+    text-align: left;
+    padding-left: 8px; /* push further left */
+  }
+
+  .story-header img {
+    display: block;
+    max-width: 520px; /* smaller header graphic */
+    width: 100%;
+    height: auto;
+    margin: 0 0 12px 0; /* align to left */
+  }
+  
+  .story h2 { display: none; }
+  
+  .story p {
+    font-family: 'Poppins Local', 'Poppins', sans-serif;
+    font-size: 18px; /* shrink text */
+    line-height: 1.9;
+    max-width: 980px; /* narrower column */
+    margin: 0; /* left aligned, no centering */
+    color: #53281c; /* exact color provided */
+  }
+
+  .story p strong { font-weight: 800; }
+  .story p em { font-style: italic; }
+
+/* Image-only story layout */
+.story-image-only img {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  margin: 0 auto; /* center image */
+}
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .flavors { grid-template-columns: repeat(2, 1fr); }
+    .flavor-card { height: 160px; }
+    .flavor-card img { max-width: 220px; transform: translate(-50%, -25%); }
+    .flavor-titles-image { margin-top: -60px; }
+  }
+
+  @media (max-width: 640px) {
+    .flavors { grid-template-columns: 1fr; }
+    .flavor-card { height: 150px; }
+    .flavor-card img { width: 75%; max-width: 300px; transform: translate(-50%, -25%); }
+    .flavor-titles-image { margin-top: -40px; }
+    .airport-title img { max-width: 1000px; }
+  }
+  
