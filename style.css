@@ -254,10 +254,10 @@ body {
   }
 
   @media (max-width: 640px) {
-    .flavors { grid-template-columns: repeat(2, 1fr); } /* bigger cups on phones */
-    .flavor-card { height: 190px; }
-    .flavor-card img { width: 85%; max-width: 260px; transform: translate(-50%, -28%); }
-    .flavor-titles-image { margin-top: -24px; }
+    .flavors { grid-template-columns: repeat(4, 1fr); } /* keep alignment with 4 tiles */
+    .flavor-card { height: 150px; }
+    .flavor-card img { width: 80%; max-width: 220px; transform: translate(-50%, -28%); }
+    .flavor-titles-image { margin-top: -20px; }
     .airport-title img { max-width: 1000px; }
   }
   
