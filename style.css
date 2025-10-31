@@ -278,7 +278,7 @@ body {
       */
       --tiles-gap: -200px;      /* pull tiles up roughly 5 inches */
       --flavors-offset: 20px;   /* bring the cups section higher on the screen */
-      --story-offset: -150px;   /* pull Millie’s Story up to match tiles */
+      --story-offset: 10px;   /* pull Millie’s Story up to match tiles */
     }
 
     /* Keep 4 cups across on mobile so each aligns with its tile */
