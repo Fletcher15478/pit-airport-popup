@@ -265,12 +265,12 @@ body {
       - --story-offset: space above the Millie’s Story image (lower value brings it UP)
     */
     body { 
-      --cup-width: 80%;
-      --card-height: 170px;
-      --cups-gap: 0.9rem;
-      --tiles-gap: 8px;
-      --flavors-offset: 40px;
-      --story-offset: 16px;
+      --cup-width: 92%;        /* increase to make cups bigger on mobile */
+      --card-height: 200px;    /* more vertical space for larger cups */
+      --cups-gap: 0.8rem;      /* small gap between the 4 cups */
+      --tiles-gap: 4px;        /* pull pink tiles image closer to cups */
+      --flavors-offset: 20px;  /* bring the cups section higher on the screen */
+      --story-offset: 8px;     /* bring Millie's Story closer to tiles */
     }
 
     /* Keep 4 cups across on mobile so each aligns with its tile */
