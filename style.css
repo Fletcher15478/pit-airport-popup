@@ -265,12 +265,20 @@ body {
       - --story-offset: space above the Millie’s Story image (lower value brings it UP)
     */
     body { 
-      --cup-width: 92%;        /* increase to make cups bigger on mobile */
-      --card-height: 200px;    /* more vertical space for larger cups */
-      --cups-gap: 0.8rem;      /* small gap between the 4 cups */
-      --tiles-gap: 4px;        /* pull pink tiles image closer to cups */
-      --flavors-offset: 20px;  /* bring the cups section higher on the screen */
-      --story-offset: 8px;     /* bring Millie's Story closer to tiles */
+      --cup-width: 92%;         /* increase to make cups bigger on mobile */
+      --card-height: 200px;     /* more vertical space for larger cups */
+      --cups-gap: 0.8rem;       /* small gap between the 4 cups */
+      /*
+        IMPORTANT: Tiles and Story vertical tuning for MOBILE ONLY
+        - --tiles-gap controls how far UP the pink tiles image sits relative to the cups.
+          Use negative values to pull it upward. Typical CSS inch ≈ 96px, so 5in ≈ 480px.
+          Example: -480px moves it up ~5 inches on most devices.
+        - --story-offset controls the spacing ABOVE the Millie’s Story image. Lower or
+          negative values will pull it up to follow the tiles.
+      */
+      --tiles-gap: -480px;      /* pull tiles up roughly 5 inches */
+      --flavors-offset: 20px;   /* bring the cups section higher on the screen */
+      --story-offset: -460px;   /* pull Millie’s Story up to match tiles */
     }
 
     /* Keep 4 cups across on mobile so each aligns with its tile */
