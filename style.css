@@ -64,7 +64,7 @@ body {
     box-shadow: none; /* remove visible line */
     display: flex;
     align-items: center;
-    padding: 0 16px;
+    padding: env(safe-area-inset-top) 16px 0 16px; /* cover iOS notch area */
     z-index: 1000;
   }
   .navbar-brand img { height: 56px; display: block; }
@@ -74,7 +74,7 @@ body {
     background: #ffe27d; /* blend with page, hide seam */
     text-align: center;
     padding: 0 0 6px; /* bring image closer to navbar */
-    margin-top: 76px; /* offset fixed navbar height */
+    margin-top: calc(76px + env(safe-area-inset-top)); /* offset fixed navbar + notch */
     z-index: 1;
   }
 
