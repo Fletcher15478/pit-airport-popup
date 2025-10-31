@@ -254,11 +254,32 @@ body {
   }
 
   @media (max-width: 640px) {
-    /* Two-by-two layout for larger cups on phones with comfortable spacing */
-    .flavors { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
-    .flavor-card { height: 240px; }
-    .flavor-card img { width: 95%; max-width: 340px; transform: translate(-50%, -26%); }
-    .flavor-titles-image { margin-top: 10px; } /* small positive gap below cups */
+    /*
+      MOBILE TUNING (phones ≤640px)
+      Adjust the variables below to make elements bigger/smaller or change spacing on mobile only.
+      - --cup-width: size of each cup image (percentage of its card width)
+      - --card-height: vertical space reserved for each cup
+      - --cups-gap: gap between the 4 cup columns
+      - --tiles-gap: gap between the cups and the pink tiles image
+      - --flavors-offset: distance from the banner to the cups (lower value brings cups UP)
+      - --story-offset: space above the Millie’s Story image (lower value brings it UP)
+    */
+    body { 
+      --cup-width: 80%;
+      --card-height: 170px;
+      --cups-gap: 0.9rem;
+      --tiles-gap: 8px;
+      --flavors-offset: 40px;
+      --story-offset: 16px;
+    }
+
+    /* Keep 4 cups across on mobile so each aligns with its tile */
+    .flavors { grid-template-columns: repeat(4, 1fr); gap: var(--cups-gap); }
+    .flavors-section { margin-top: var(--flavors-offset); }
+    .flavor-card { height: var(--card-height); }
+    .flavor-card img { width: var(--cup-width); max-width: 240px; transform: translate(-50%, -26%); }
+    .flavor-titles-image { margin-top: var(--tiles-gap); }
+    .story { margin-top: var(--story-offset); }
     .airport-title img { max-width: 1000px; }
   }
   
