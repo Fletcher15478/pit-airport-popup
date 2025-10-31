@@ -126,7 +126,7 @@ body {
     margin-left: -50vw;
     margin-right: -50vw;
     padding: 0;
-    margin-top: -36px; /* nudge banner further up */
+    margin-top: -12px; /* give breathing room below PIT image */
   }
 
   .introducing-strip img {
@@ -255,10 +255,10 @@ body {
 
   @media (max-width: 640px) {
     /* Two-by-two layout for larger cups on phones with comfortable spacing */
-    .flavors { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
-    .flavor-card { height: 220px; }
-    .flavor-card img { width: 88%; max-width: 300px; transform: translate(-50%, -22%); }
-    .flavor-titles-image { margin-top: 12px; } /* small positive gap below cups */
+    .flavors { grid-template-columns: repeat(2, 1fr); gap: 1.6rem; }
+    .flavor-card { height: 240px; }
+    .flavor-card img { width: 95%; max-width: 340px; transform: translate(-50%, -26%); }
+    .flavor-titles-image { margin-top: 10px; } /* small positive gap below cups */
     .airport-title img { max-width: 1000px; }
   }
   
